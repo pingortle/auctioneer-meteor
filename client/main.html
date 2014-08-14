@@ -1,0 +1,20 @@
+<head>
+  <title>Auctioneer</title>
+</head>
+
+<body>
+  {{> main}}
+</body>
+
+<template name="main">
+<button data-viewing="auctioneer">Become an Auctioneer</button>
+<button data-viewing="bidder">Become a Bidder</button>
+{{> loginButtons}}
+
+<h1>Auctioneer</h1>
+{{#if currentUser}}
+{{> UI.dynamic template=currentView}}
+{{else}}
+<p>Oops... You're not logged in!</p>
+{{/if}}
+</template>

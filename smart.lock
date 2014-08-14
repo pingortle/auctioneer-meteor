@@ -1,0 +1,33 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "stylus-multi": {},
+      "simple-schema": {},
+      "collection2": {},
+      "roles": {}
+    },
+    "packages": {
+      "stylus-multi": {
+        "git": "https://github.com/furrio/meteor-stylus-multi.git",
+        "tag": "v0.0.2",
+        "commit": "f9a3e832f43edfda74d845fce6007725f5e05a5f"
+      },
+      "simple-schema": {
+        "git": "https://github.com/aldeed/meteor-simple-schema.git",
+        "tag": "v0.7.0",
+        "commit": "77d267aec4ba8a70f677e5d9ef9fb91fb0e3f0f6"
+      },
+      "collection2": {
+        "git": "https://github.com/aldeed/meteor-collection2.git",
+        "tag": "v0.4.6",
+        "commit": "80554182486be0d8e74f7ed02194a5649d712e27"
+      },
+      "roles": {
+        "git": "https://github.com/alanning/meteor-roles.git",
+        "tag": "v1.2.11",
+        "commit": "2d7dc91848ec874d3a0852c77f462d0fae749de5"
+      }
+    }
+  }
+}

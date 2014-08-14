@@ -1,0 +1,1 @@
+DefinedUserRoles = ["auctioneer", "bidder"]
