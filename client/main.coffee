@@ -8,5 +8,5 @@ Template.main.helpers
     Session.get "viewing"
 
 Template.main.events
-  'click button': (evt) ->
+  'click button[data-viewing]': (evt) ->
     Session.set "viewing", evt.currentTarget.dataset.viewing
