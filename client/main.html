@@ -7,16 +7,18 @@
 </body>
 
 <template name="main">
-<div>
+<div class="top-bar">
   <button data-viewing="auctioneer">Become an Auctioneer</button>
   <button data-viewing="bidder">Become a Bidder</button>
   {{> loginButtons}}
 </div>
 
-<h1>Auctioneer</h1>
-{{#if currentUser}}
-{{> UI.dynamic template=currentView}}
-{{else}}
-<p>Oops... You're not logged in!</p>
-{{/if}}
+<div class="content">
+  <h1>Auctioneer</h1>
+  {{#if currentUser}}
+  {{> UI.dynamic template=currentView}}
+  {{else}}
+  <p>Oops... You're not logged in!</p>
+  {{/if}}
+</div>
 </template>

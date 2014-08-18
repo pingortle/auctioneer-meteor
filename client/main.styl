@@ -14,15 +14,26 @@ logo-text = #266A2E
 bg-color-top = #6B78B4
 bg-color-bottom = #79BEDB
 
-*
-  transition()
-
 html, body
   min-height 100%
 
 body
   background linear-gradient(top,bg-color-top, bg-color-bottom)
   font-family 'Ubuntu'
+
+.top-bar
+  col(3/4)
+  // border 2px none black
+  // border-style none solid solid none
+  // border-radius 0px 0px 4px 0px
+  rounded()
+
+.content
+  col(3/4)
+  shift(1/4)
+  border 2px none black
+  border-style solid none none solid
+  border-radius 4px 0px 0px 0px
 
 h1
   $h1()
