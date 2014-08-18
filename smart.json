@@ -1,6 +1,10 @@
 {
   "packages": {
-    "stylus-multi": {},
+    "stylus-multi": {
+      "git": "https://github.com/furrio/meteor-stylus-multi.git",
+      "branch": "master",
+      "commit": "0bf258b71cc3cfd8dfe4d2f04c9de2290a355d53"
+      },
     "simple-schema": {},
     "collection2": {},
     "roles": {}

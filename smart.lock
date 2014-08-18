@@ -2,7 +2,10 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "stylus-multi": {},
+      "stylus-multi": {
+        "git": "https://github.com/furrio/meteor-stylus-multi.git",
+        "branch": "master"
+      },
       "simple-schema": {},
       "collection2": {},
       "roles": {}
@@ -10,8 +13,8 @@
     "packages": {
       "stylus-multi": {
         "git": "https://github.com/furrio/meteor-stylus-multi.git",
-        "tag": "v0.0.2",
-        "commit": "f9a3e832f43edfda74d845fce6007725f5e05a5f"
+        "branch": "master",
+        "commit": "0bf258b71cc3cfd8dfe4d2f04c9de2290a355d53"
       },
       "simple-schema": {
         "git": "https://github.com/aldeed/meteor-simple-schema.git",
