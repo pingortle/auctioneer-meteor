@@ -1,4 +1,54 @@
+@css {
+  @import url(http://fonts.googleapis.com/css?family=Ubuntu);
+  @import url(http://fonts.googleapis.com/css?family=Special+Elite);
+}
+
+@import 'nib'
 @import 'jeet'
+@import 'axis'
+@import './animations'
+
+normalize-css()
+
+logo-text = #266A2E
+bg-color-top = #6B78B4
+bg-color-bottom = #79BEDB
+
+*
+  transition()
+
+html, body
+  min-height 100%
+
+body
+  background linear-gradient(top,bg-color-top, bg-color-bottom)
+  font-family 'Ubuntu'
 
 h1
-  color: red
+  $h1()
+  col(1/3)
+  color logo-text
+  font-family 'Special Elite'
+  animated()
+  +tablet()
+    stack()
+  +mobile()
+    stack()
+
+.animated
+  animated()
+
+h2
+  $h2()
+  col(2/3)
+  +tablet()
+    stack()
+  +mobile()
+    stack()
+
+button
+  $button()
+  font-family 'Ubuntu' sans-serif
+  +mobile()
+    color orange
+    stack()

@@ -7,9 +7,11 @@
 </body>
 
 <template name="main">
-<button data-viewing="auctioneer">Become an Auctioneer</button>
-<button data-viewing="bidder">Become a Bidder</button>
-{{> loginButtons}}
+<div>
+  <button data-viewing="auctioneer">Become an Auctioneer</button>
+  <button data-viewing="bidder">Become a Bidder</button>
+  {{> loginButtons}}
+</div>
 
 <h1>Auctioneer</h1>
 {{#if currentUser}}
