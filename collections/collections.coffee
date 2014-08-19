@@ -1,4 +1,4 @@
-AppSchema = {}
+@AppSchema = {}
 
 makeName = (type) ->
   type: String
@@ -8,7 +8,7 @@ makeName = (type) ->
 AppSchema.Organization = new SimpleSchema
   name: makeName("Organization")
 
-Organizations = new Meteor.Collection('organizations')
+@Organizations = new Meteor.Collection('organizations')
 Organizations.attachSchema(AppSchema.Organization)
 
 AppSchema.Auction = new SimpleSchema
@@ -63,5 +63,5 @@ AppSchema.Bid = new SimpleSchema
     regEx: SimpleSchema.RegEx.Id
     denyUpdate: true
 
-Bids = new Meteor.Collection('bids')
+@Bids = new Meteor.Collection('bids')
 Bids.attachSchema(AppSchema.Bid)

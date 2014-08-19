@@ -1,14 +1,19 @@
 @css {
   @import url(http://fonts.googleapis.com/css?family=Ubuntu);
   @import url(http://fonts.googleapis.com/css?family=Special+Elite);
+  @import url(http://fonts.googleapis.com/css?family=Raleway:100);
+  @import url(http://fonts.googleapis.com/css?family=Arvo);
 }
 
 @import 'nib'
 @import 'jeet'
 @import 'axis'
 @import './animations'
+@import './mixins'
 
 normalize-css()
+
+// edit()
 
 logo-text = #266A2E
 bg-color-top = #6B78B4
@@ -18,48 +23,72 @@ html, body
   min-height 100%
 
 body
-  background linear-gradient(top,bg-color-top, bg-color-bottom)
-  font-family 'Ubuntu'
+  color #26406A
+  background bg-color-bottom
+  font-family 'Arvo'
 
 .top-bar
-  col(3/4)
-  // border 2px none black
-  // border-style none solid solid none
-  // border-radius 0px 0px 4px 0px
-  rounded()
+  span(3/4)
+  +tablet-or-mobile()
+    stack()
+  margin-bottom 32px
+  .stuff
+    background linear-gradient(right, #ffffff40, #00000010)
+    padding 4px 4px 4px 4px
+    border 1px none #ffffff80
+    border-style none solid solid none
+    border-radius 0px 0px 4px 0px
+    +tablet-or-mobile()
+      border-style none none solid none
+      border-radius 0px
 
 .content
-  col(3/4)
-  shift(1/4)
-  border 2px none black
-  border-style solid none none solid
-  border-radius 4px 0px 0px 0px
+  span(3/4, 1/4)
+  +tablet-or-mobile()
+    stack()
+  .stuff
+    padding 8px 8px 8px 8px
+    border 1px none #ffffff80
+    border-style solid none solid solid
+    border-radius 4px 0px 0px 4px
+    background linear-gradient(left, #ffffff40, #00000000)
+    +tablet-or-mobile()
+      border-style solid none solid none
+      border-radius 0px
 
 h1
-  $h1()
-  col(1/3)
+  $h1(2)
   color logo-text
-  font-family 'Special Elite'
-  animated()
-  +tablet()
-    stack()
-  +mobile()
-    stack()
+  font-family 'Raleway'
+
+.gavel-logo
+  size(32px, 32px)
+  relative bottom left
+  margin-bottom -4px
+  image '/img/146-gavel-icon.png'
+  display inline-block
+
+.gavel-logo:hover
+  animated(swing)
 
 .animated
   animated()
 
 h2
-  $h2()
-  col(2/3)
-  +tablet()
-    stack()
+  $h2(1.2)
+
+button
+  glossy-button()
+  font-family 'Arvo'
   +mobile()
     stack()
 
-button
-  $button()
-  font-family 'Ubuntu' sans-serif
+.login-button
+  glossy-button()
+
+.login-link-and-dropdown-list
   +mobile()
-    color orange
     stack()
+
+.login-link-text
+  glossy-button()
