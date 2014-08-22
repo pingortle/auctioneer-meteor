@@ -19,11 +19,13 @@ logo-text = #266A2E
 bg-color-top = #6B78B4
 bg-color-bottom = #79BEDB
 
+color-content-default = #26406A
+
 html, body
   min-height 100%
 
 body
-  color #26406A
+  color color-content-default
   background bg-color-bottom
   font-family 'Arvo'
 
@@ -78,10 +80,15 @@ h2
   $h2(1.2)
 
 button
-  glossy-button()
+  $button(color-content-default)
+  border 0
   font-family 'Arvo'
   +mobile()
     stack()
+
++mobile()
+  button:not(:first-child)
+    margin-top 2px
 
 .login-button
   glossy-button()
@@ -89,6 +96,7 @@ button
 .login-link-and-dropdown-list
   +mobile()
     stack()
+    margin-top 2px
 
 .login-link-text
-  glossy-button()
+  $button(color-content-default)
